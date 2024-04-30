@@ -1,3 +1,4 @@
+#include <errno.h>
 #include "main.h"
 
 /**
@@ -12,11 +13,12 @@ int arg_counter(char *buf, int size)
 	int count = 0, i;
 
 	for (i = 1; i < size; i++)
-		count += ((buf[i - 1] == ' ' && buf[i] != ' ') ||
-			  (i == 1 && buf[i - 1] != ' '));
+		count += ((buf[i - 1] == ' ' &&
+					buf[i] != ' ') ||
+				(i == 1 &&
+				 buf[i - 1] != ' '));
 	return (count);
 }
-
 /**
  * get_command - format command line arguments
  *
@@ -30,31 +32,28 @@ char **get_command(void)
 	k = getline(&buf, &n, stdin);
 	if (k == (size_t)(-1))
 	{
+		if (errno == 0)
+			return (NULL);
 		perror("Failure to read line");
 		return (NULL);
 	}
-	array = malloc(sizeof(char *) * arg_counter(buf, k));
+	array = malloc(sizeof(char *) * (arg_counter(buf, k) + 1));
 	for (i = 1; i < k; i++)
-	{
-		if ((buf[i - 1] == ' ' && buf[i] != ' ') ||
-		    (i == 1 && buf[i - 1] != ' '))
 		{
-			array[l] = buf + i;
+			if (((buf[i - 1] == ' ' ||
+						buf[i - 1] == '\0') &&
+					buf[i] != ' ') ||
+				(i == 1 && buf[i - 1] != ' '))
+			if (buf[i - 1] == ' ' || buf[i - 1] == '\0')
+				array[l] = buf + i;
+			else
+				array[l] = buf + i - 1;
 			while (buf[i] != ' ' && i < k && buf[i] != '\n')
 				i++;
 			buf[i] = '\0';
 			l++;
 		}
 	}
+	array[l] = NULL;
 	return (array);
 }
-
-int main(void)
-{
-	char **array = get_command();
-
-	printf("%s\n%s\n", array[0], array[1]);
-	free(array);
-	return (0);
-}
-
