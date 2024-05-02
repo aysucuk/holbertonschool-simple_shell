@@ -9,10 +9,8 @@
  */
 int main(int argc, char **argv)
 {
-	char *command;
-	char **fcommand = malloc(sizeof(char *) * 2);
-	size_t n = 0;
-	size_t k;
+	char *command, **fcommand = malloc(sizeof(char *) * 2);
+	size_t n = 0, k;
 	pid_t pid;
 	struct stat st;
 
@@ -41,5 +39,4 @@ int main(int argc, char **argv)
 		else
 			wait(NULL);
 	}
-	return (0);
 }

@@ -1,4 +1,5 @@
 #include "main.h"
+#include <errno.h>
 /**
   * find_file - finds file location in path variables
   * @command: user input
