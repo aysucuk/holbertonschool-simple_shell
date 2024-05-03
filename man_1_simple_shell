@@ -1,0 +1,58 @@
+.\" Manual page for ShellProgram
+.TH SHELLPROGRAM 1 "May 2024" "Version 1.2" "Linux edition"
+
+.SH NAME
+ShellProgram \- a simple shell program
+
+.SH SYNOPSIS
+.B ShellProgram
+
+.SH DESCRIPTION
+ShellProgram is a basic command-line interpreter that allows users to enter commands for execution. It provides a simple interface to the underlying operating system. This shell program reads input from the user, parses commands, and executes them in separate processes.
+
+.SH USAGE / COMPILATION
+ShellProgram operates in a loop, continually prompting for user input and executing commands. It supports basic shell functionalities. All files are to be compiled using "gcc -Wall -Werror -Wextra -pedantic *.c -o hsh"
+
+.SH COMMANDS
+Supported commands:
+.TP
+.BR exit
+Exit ShellProgram. If a status is provided, it will be used as the exit status.
+
+.SH OPTIONS
+No command-line options are supported.
+
+.SH RETURN VALUE
+ShellProgram returns 0 upon successful execution. Error codes might be returned if there are issues with command execution.
+
+.SH EXAMPLES
+Running ShellProgram:
+.B $ ShellProgram
+
+.SH PATH
+It will look inside all directories in the PATH environment variable for executables.
+
+.SH SEE ALSO
+bash(1), sh(1), execve(2)
+
+.SH AUTHORS
+Created by Aysu Sadikhova and Aytaj Allahverdiyeva.
+
+.SH BUGS
+Single space required after argument.
+
+.SH COPYRIGHT
+This is free software; see the source for copying conditions. There is NO warranty;
+
+.SH DISCLAIMER
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
+
+.SH REPORTING BUGS
+Report bugs to the authors.
+
+.SH HISTORY
+Brief history or version updates.
+
+.SH REFERENCES
+Any references or resources used in developing the ShellProgram.
+
