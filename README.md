@@ -40,9 +40,7 @@ git clone <repository_url>
 Your code will be compiled this way:
 
 ```
-
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-
 ```
 
 ### Run
