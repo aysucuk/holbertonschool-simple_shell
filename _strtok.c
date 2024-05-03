@@ -10,7 +10,7 @@
 char **_strtok(char *str, char delim)
 {
 	char **array, *start, *end;
-	int i = 0, j = 0, max_tokens = 10;
+	int i = 0, j = 1, max_tokens = 10;
 
 	if (str == NULL)
 		return (NULL);
@@ -46,5 +46,4 @@ char **_strtok(char *str, char delim)
 
 	array[j - 1] = NULL;
 	return (array);
-i}
-
+}
