@@ -1,10 +1,13 @@
 #include "main.h"
+
 /**
-  * find_file - finds file location in path variables
-  * @command: user input
-  * @lk: is the flag for is this command use path or not
-  * Return: modified user input
-  */
+ * find_file - finds file location in path variables
+ * @command: user input
+ * @lk: flag indicating if this command uses path or not
+ *
+ * Return: modified user input
+ */
+char **path_var = NULL;
 char *find_file(char *command, int *lk)
 {
 	int i = 0, len;
@@ -14,8 +17,10 @@ char *find_file(char *command, int *lk)
 	if (command[0] == '/' || command[0] == '.')
 		if (!stat(command, &st))
 			return (command);
+
 	if (!path_var)
 		return (NULL);
+
 	while (path_var[i])
 	{
 		len = strlen(path_var[i]);
