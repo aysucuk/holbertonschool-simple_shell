@@ -14,10 +14,10 @@ extern char **path_var;
 extern char **environ;
 char **get_command(char **);
 char **get_path(char **);
+char *find_file(char *command, int *);
 void print_env(void);
 void print_prompt(int status);
 void free_path(void);
-char *find_file(char *command, int *);
 int exec_c(char **fcommand);
 char **_strtok(char *str, char delim);
 
