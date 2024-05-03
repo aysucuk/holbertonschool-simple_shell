@@ -10,18 +10,28 @@ Unified Shell merges the essential features from various shell implementations t
 
 ## Core Features
 
-- **User-Friendly Prompt:** Offers a clear and welcoming prompt for user interaction.
+- **Intuitive Prompt:** Provides a clear and welcoming prompt for user interaction.
+- **Error Handling:** Gracefully manages scenarios where executables are not found, printing informative error messages and returning the prompt.
 - **Command Execution:** Executes commands with graceful error handling.
-- **File Navigation:** Allows easy navigation through directories and file management.
+- **File Navigation:** Simplifies navigation through directories and file management.
 - **Process Management:** Manages processes efficiently, including script execution.
 - **Custom Commands:** Supports built-in commands like `exit` and `env` for enhanced functionality.
+
+## Current Limitations
+
+* **PATH Independence:** Operates without reliance on the PATH environment variable.
+* **No Built-Ins:** Does not implement built-in commands.
+* **Special Character Avoidance:** Refrains from handling special characters.
+* **Cursor Stationarity:** Maintains a steady cursor position.
+* **Argument-Free Operation:** Executes commands without the complexity of arguments.
+
 
 ## Getting HSH
 
 In order to install the shell and get benefits of it's features you need to clone the current project, and compile it.
 You need to make sure that this shell tested and garantees work based on `gcc-4.8` and the `C90` standard.
 
-## Installation
+## Usage and Installation
 
 To install Unified Shell, follow below steps
 
