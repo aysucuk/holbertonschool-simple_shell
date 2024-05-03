@@ -16,5 +16,5 @@ int exec_c(char **fcommand)
 		wait(&r_code);
 		return (WEXITSTATUS(r_code));
 	}
-	return (r_code)
+	return (r_code);
 }
