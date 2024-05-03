@@ -8,10 +8,10 @@
 char **_strtok(char *str, char delim)
 {
 	char **array, *start, *end;
-	int i = 0, j;  f;
+	int i = 0, j = 1, f = 0;
 
 	if (str == NULL)
-		return (0);
+		return (NULL);
 	while (str[i])
 	{
 		if (str[i] != delim)
@@ -23,7 +23,7 @@ char **_strtok(char *str, char delim)
 				array = malloc(sizeof(char *) * j), f++;
 			else
 				array = realloc(array, sizeof(char *) * j);
-			if (str[i] == NULL)
+			if (str[i] == '\0')
 			{
 				array[j - 1] = strdup(start);
 				j++;
@@ -44,5 +44,5 @@ char **_strtok(char *str, char delim)
 	else
 		array = realloc(array, sizeof(char *) * j);
 	array[j - 1] = NULL;
-	return (NULL);
+	return (array);
 }
