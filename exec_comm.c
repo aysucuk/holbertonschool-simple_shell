@@ -1,6 +1,7 @@
 #include "main.h"
 /**
   * exec_c - execute user input
+  * @fcommand: user input
   * Return: executed commands return code
   */
 int exec_c(char **fcommand)
