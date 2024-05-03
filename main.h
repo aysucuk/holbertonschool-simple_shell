@@ -12,6 +12,7 @@
 
 extern char **path_var;
 extern char **environ;
+char *find_file(char *command, int *lk);
 char **get_command(char **);
 char **get_path(char **);
 char *find_file(char *command, int *);
