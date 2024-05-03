@@ -33,3 +33,22 @@ char *find_file(char *command, int *lk)
 	}
 	return (NULL);
 }
+
+int main(void)
+{
+	char **path_var = {"path1", "path2", NULL};
+	int lk = 0;
+	char *command = "test.txt";
+	char *result = find_file(command, path_var, &lk);
+
+	if (result != NULL)
+	{
+		printf("File found at: %s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("File not found.\n");
+	}
+	return (0);
+}
