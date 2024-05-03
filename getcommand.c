@@ -17,7 +17,11 @@ int arg_counter(char *buf, int size)
 				 buf[i - 1] != ' '));
 	return (count);
 }
-
+/**
+  * get_command - format command line arguments
+  * @buf: buffer for storing user input
+  * Return: memory address where arguments are stored
+  */
 char **get_command(char **buf)
 {
 	char **array;
