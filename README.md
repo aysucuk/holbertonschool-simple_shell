@@ -1,14 +1,18 @@
 # C - Simple Shell
 Welcome to Unified Shell, a versatile command-line interpreter designed to streamline your interaction with the operating system. Below, you'll find detailed information about the shell's functionalities, usage instructions, contributors, and more.
+
 ## General
-Unified Shell merges the essential features from various shell implementations to provide a robust and user-friendly command-line interface.
+Unified Shell merges the essential features from various shell implementations to provide a robust an user-friendly command-line interface.
+
 ![Shell GIF](https://miro.medium.com/v2/resize:fit:940/0*RA38PzdJipiQExCP.gif)
+
 ## Key Functionalities
 - **User-Friendly Prompt:** Offers a clear and welcoming prompt for user interaction.
 - **Command Execution:** Executes commands with graceful error handling.
 - **File Navigation:** Allows easy navigation through directories and file management.
 - **Process Management:** Manages processes efficiently, including script execution.
 - **Custom Commands:** Supports built-in commands like `exit` and `env` for enhanced functionality.
+
 ## Installation
 To install Unified Shell, follow these steps:
 1. Clone the repository:
@@ -27,6 +31,7 @@ To install Unified Shell, follow these steps:
 Unified Shell supports the following custom commands:
 - `exit`: Terminates the shell or program.
 - `env`: Displays the current environment or runs a specified command in a modified environment.
+
 ## Contributing
 Contributions from developers like you make Unified Shell better. Here's how you can contribute:
 1. Fork the repository.
@@ -34,15 +39,17 @@ Contributions from developers like you make Unified Shell better. Here's how you
 3. Commit your changes (`git commit -m 'Add YourFeature'`).
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
+
 ## Content of Files
-| File                                                    | Description                                     |
-| ------------------------------------------------------- | ----------------------------------------------- |
-| [AUTHORS](link)                                         | List of contributors to the repository          |
-| [man_1_simple_shell](link)                              | Information about the repository                |
-| [main.h](link)                                          | Prototypes, functions, and headers             |
-| [Flowchart](link)                                       | Visual representation of shell's workflow      |
+| File                | Description                                  |
+| ------------------- | -------------------------------------------- |
+| [AUTHORS](https://github.com/aysucuk/holbertonschool-simple_shell/blob/main/AUTHORS)     | List of contributors to the repository       |
+| [man_1_simple_shell](https://github.com/aysucuk/holbertonschool-simple_shell/blob/main/man_1_simple_shell)  | Information about the repository             |
+| [main.h](https://github.com/aysucuk/holbertonschool-simple_shell/blob/main/main.h)      | Prototypes, functions, and headers           |
+
 
 ## Authors
-- Aysucuk
-- Atya22
+
+- Aysu Sadikhova (https://github.com/aysucuk)
+- Aytaj Allahverdiyeva (https://github.com/Atya22)
 
